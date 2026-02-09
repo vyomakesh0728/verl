@@ -41,6 +41,6 @@ repos:
     hooks:
       - id: compileall
         name: Compile all python files
-        entry: sh -c 'PYTHONWARNINGS=error python3 -m compileall -q -x "/(\\.venv|\\.git|\\.mypy_cache|\\.pytest_cache)/" .'
+        entry: sh -c 'PYTHONWARNINGS=error python3 -m compileall -q . -x "(^|[\\/])(\.venv|venv|\.git)([\\/]|$)"'
         language: python
         pass_filenames: false
